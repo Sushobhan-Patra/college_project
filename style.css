@@ -1,3 +1,12 @@
+:root {
+  --bg-color: #e3edf7;
+  --black-color: #000;
+  --white-color: #fff;
+  --shadow-color1: #00000026;
+  --shadow-color2: #ffffffb3;
+  --border: 0.1rem solid #00000033;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,19 +14,22 @@
   font-family: cursive;
   /* border: 1px solid salmon; */
 }
+
 html,
 body {
-  width: 100vw;
+  min-width: 98vw;
   min-height: 100vh;
-  background-color: #e3edf7;
+  background-color: var(--bg-color);
 }
+/* navbar */
 .navbar {
-  width: 100vw;
+  width: 97vw;
+  margin: 0rem 1rem 0rem 1rem;
   padding: 0.938rem 1.875rem;
   display: flex;
   justify-content: space-between;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
 }
 
 .left-nav {
@@ -42,7 +54,7 @@ body {
 .center-nav li a,
 .dropdown-content a {
   display: block;
-  color: #000;
+  color: var(--black-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -52,15 +64,15 @@ body {
 
 .center-nav li a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #000;
+  background-color: var(--black-color);
   border-radius: 1rem;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 1rem;
   min-width: 160px;
   z-index: 1;
@@ -76,17 +88,124 @@ body {
   text-align: center;
   align-items: center;
 }
-.right-nav .btn {
+.btn {
   text-decoration: none;
-  color: #000;
+  color: var(--black-color);
   text-transform: capitalize;
   padding: 0.8rem 1.8rem;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
   border-radius: 0.5rem;
 }
-.right-nav .btn:hover {
-  background-color: #000;
-  color: #fff;
+.btn:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+/* midile-part */
+.main .midile-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* contenar1 */
+.midile-part .contenar1 {
+  width: 97vw;
+  min-height: 80vh;
+  margin: 1rem 1rem 0rem 1rem;
+  position: relative;
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
+}
+.contenar1 .box {
+  width: 30vw;
+  height: 50vh;
+  position: absolute;
+  top: 19%;
+  left: 60%;
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.box h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.midile-part .contenar2 {
+  width: 97vw;
+  min-height: 80vh;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contenar2 .c2top {
+  position: absolute;
+  top: 2%;
+}
+.contenar2 .box2 {
+  width: 30vw;
+  height: 30vh;
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
+.contenar2 .c2bottom {
+  position: absolute;
+  bottom: 2%;
+}
+/* .contenar3 */
+.midile-part .contenar3 {
+  width: 97vw;
+  min-height: 80vh;
+  margin: 0rem 1rem 0rem 1rem;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.grid-container {
+  width: 93vw;
+  height: 80vh;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 5rem;
+}
+
+.grid-item {
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
+  border-radius: 1rem;
+}
+.footer {
+  width: 97vw;
+  margin: 1rem 1rem 0rem 1rem;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 6px 6px 10px -1px var(--shadow-color1),
+    -6px -6px 10px -1px var(--shadow-color2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
