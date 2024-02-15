@@ -6,7 +6,23 @@
   --shadow-color2: #ffffffb3;
   --border: 0.1rem solid #00000033;
 }
+.dark-theme {
+  --bg-color: #070f2b;
+  --black-color: #ffffff;
+  --white-color: #000;
+  --shadow-color1: #9290c3;
+  --shadow-color2: #535c91;
+  --border: 0.1rem solid #ffffff33;
+}
 
+i {
+  color: var(--black-color);
+}
+
+#icon {
+  width: 30px;
+  cursor: pointer;
+}
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +56,7 @@ body {
   font-size: 1.8rem;
 }
 .left-nav h1 {
+  color: var(--black-color);
   margin-left: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -120,6 +137,7 @@ body {
 .contenar1 .box {
   width: 30vw;
   height: 50vh;
+  color: var(--black-color);
   position: absolute;
   top: 19%;
   left: 60%;
@@ -152,6 +170,7 @@ body {
 }
 .contenar2 .box2 {
   width: 30vw;
+  color: var(--black-color);
   height: 30vh;
   box-shadow: 6px 6px 10px -1px var(--shadow-color1),
     -6px -6px 10px -1px var(--shadow-color2);
@@ -182,22 +201,41 @@ body {
 }
 .grid-container {
   width: 93vw;
-  height: 80vh;
+  height: 100vh;
   padding: 2rem;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .grid-item {
   padding: 2rem;
+  color: var(--black-color);
   text-align: center;
   box-shadow: 6px 6px 10px -1px var(--shadow-color1),
     -6px -6px 10px -1px var(--shadow-color2);
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.grid-item i {
+  font-size: 2rem;
+}
+.grid-item h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.grid-item p {
+  font-size: 0.6rem;
+  opacity: 0.6;
 }
 .footer {
+  color: var(--black-color);
   width: 97vw;
   margin: 1rem 1rem 0rem 1rem;
   padding: 1rem;
